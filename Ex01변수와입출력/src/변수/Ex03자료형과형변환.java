@@ -13,7 +13,9 @@ public class Ex03자료형과형변환 {
 		char c = 'a';
 //		char c2 = 'abc'; error
 		char c2 = 75; //ASCII 코드 상에 따름
+		char c3 = 97;
 		System.out.println(c2); // K 출력
+		System.out.println(c == c3); //true
 		
 		//3. 정수형
 		//3-1. byte(1byte, 2의-7승 ~ 2의7승 -1)
