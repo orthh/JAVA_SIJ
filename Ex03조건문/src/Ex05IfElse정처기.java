@@ -26,16 +26,32 @@ public class Ex05IfElse정처기 {
 		System.out.print("정보시스템 구축 관리 : ");
 		exam05 = sc.nextInt();
 		
+		int sum = exam01 + exam02 + exam03
+				+ exam04 + exam05 ;
+		
+		//case 1 
 		if(exam01 < 8 || exam02 < 8 || exam03 < 8 
 				|| exam04 < 8 || exam05 < 8) {
 			isPass(false);
 		}else {
-			if(exam01 + exam02 + exam03
-					+ exam04 + exam05 >= 60) {
+			if(sum >= 60) {
 				isPass(true);
 			}else {
 				isPass(false);
 			}
+		}
+		
+		
+		//case 2 : 또이또이
+		if(exam01 >=8 && exam02 >= 8 && exam03 >= 8 
+				&& exam04 >= 8 && exam05 >= 8) {
+			if(sum >= 60) {
+				isPass(true);
+			}else{
+				isPass(false);
+			};
+		}else {
+			isPass(false);
 		}
 	}
 
