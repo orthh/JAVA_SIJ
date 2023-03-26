@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
 public class Q01 {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.print("현재 몸무게 : ");
 		int weight = sc.nextInt();
-		
+
 		System.out.print("목표 몸무게 : ");
 		int targetWeight = sc.nextInt();
 		int week = 0;
@@ -25,5 +24,7 @@ public class Q01 {
 			}
 		}
 	}
+
+
 
 }
