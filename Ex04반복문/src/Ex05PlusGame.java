@@ -23,21 +23,21 @@ public class Ex05PlusGame {
 		while(true) {
 			boolean test = false;
 			String yesOrNo;
-			if(isValid == false) {
-				while(true) {
-					System.out.print("Y 나 N 을 입력해주세요 >>");
-					yesOrNo = sc.next();
-					if(yesOrNo.equals("Y") || yesOrNo.equals("N")) {
-						if(yesOrNo.equals("Y")) life --;
-						if(yesOrNo.equals("N")) {
-							test = true;
-						}
-						isValid = true;
-						break;
-					}
-				}
-			}
-			if(test) break;
+//			if(isValid == false) {
+//				while(true) {
+//					System.out.print("Y 나 N 을 입력해주세요 >>");
+//					yesOrNo = sc.next();
+//					if(yesOrNo.equals("Y") || yesOrNo.equals("N")) {
+//						if(yesOrNo.equals("Y")) life --;
+//						if(yesOrNo.equals("N")) {
+//							test = true;
+//						}
+//						isValid = true;
+//						break;
+//					}
+//				}
+//			}
+//			if(test) break;
 			int num1 = rd.nextInt(50) + 1;
 			int num2 = rd.nextInt(50) + 1;
 			System.out.print(num1 + " + " + num2 + " = ");
@@ -45,7 +45,16 @@ public class Ex05PlusGame {
 			
 			if(answer != num1 + num2) {
 				System.out.print("Fail\n계속 하시겠습니까? ");
-				yesOrNo = sc.next();
+				
+				//yesOrNo 판별식 refactoring
+				do {
+					System.out.println("Y나 N을 입력해주세요");
+					yesOrNo = sc.next();
+				} while (!(yesOrNo.equals("Y") || yesOrNo.equals("N")));
+				
+				
+				
+				//
 				if(yesOrNo.equals("Y") || yesOrNo.equals("N")) {
 					if(yesOrNo.equals("N") || life <=1) {
 						break;
