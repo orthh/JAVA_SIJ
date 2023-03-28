@@ -17,6 +17,8 @@ public class Q12 {
 		
 		System.out.println("합은 " + result + "입니다.");
 		
+	
+		
 		//배열
 //		String[] numArr = num.split("");
 //		for(String item : numArr) {

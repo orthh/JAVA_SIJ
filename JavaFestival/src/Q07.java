@@ -16,7 +16,13 @@ public class Q07 {
 			for(int j = num - i; j >=1; j--) {
 				System.out.print("*");
 			}
-			System.out.print("\\n");
+			System.out.print("\n");
+		}
+		
+		//refactoring
+		while(num != 0) {
+			System.out.println("*".repeat(num));
+			num--;
 		}
 	}
 }
