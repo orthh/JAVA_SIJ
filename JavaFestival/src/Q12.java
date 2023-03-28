@@ -7,6 +7,7 @@ public class Q12 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력 : ");
 		String num = sc.nextLine();
+		int n = Integer.parseInt(num);
 		
 		int result = 0;
 		
@@ -17,7 +18,11 @@ public class Q12 {
 		
 		System.out.println("합은 " + result + "입니다.");
 		
-	
+		//내장함수사용x
+		//오히려 나누면 복잡해짐
+		//그냥구하기
+		
+		
 		
 		//배열
 //		String[] numArr = num.split("");
