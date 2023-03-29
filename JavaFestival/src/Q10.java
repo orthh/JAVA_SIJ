@@ -12,7 +12,7 @@ public class Q10 {
 		}
 		
 		//refactoring
-		char c = 'A';
+		char c = 'A'; //65
 		do {
 			System.out.println(c);
 			c = (char)(c+1);

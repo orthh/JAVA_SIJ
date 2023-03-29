@@ -15,7 +15,8 @@ public class Q03 {
 			if(cnt > num) break;
 		}
 		System.out.println(sum);
-
+		
+		//-1로 반복 떄리고 마지막수에서 if만 써주면 더 빠를듯
 	}
 
 

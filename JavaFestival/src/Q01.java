@@ -10,6 +10,7 @@ public class Q01 {
 
 		System.out.print("목표 몸무게 : ");
 		int targetWeight = sc.nextInt();
+		
 		int week = 0;
 		while(true) {
 			week ++;

@@ -15,6 +15,8 @@ public class Q08 {
 			if(a == 0 && b == 0) break;
 			System.out.println("결과 : " + (a-b));
 		}
+		
+		
 
 	}
 
