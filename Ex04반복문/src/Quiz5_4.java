@@ -4,16 +4,15 @@ public class Quiz5_4 {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
-		
 		String dataId = "test123";
 		String dataPwd = "abc123" ;
 		
 		
+		Scanner sc = new Scanner(System.in);
+
 		String inputId, inputPwd;
 		
 		boolean isLogined = false;
-		boolean isContinue = false;
 		
 		int tried = 3;
 		do {
@@ -33,23 +32,14 @@ public class Quiz5_4 {
 			String inputIsCtn = sc.nextLine();
 			
 			if(inputIsCtn.equals("Y")) {
-				isContinue = true;
 			}else{
-				isContinue = false;
 				System.out.println("종료");
 				break;
 			}
 			tried--;
 		} while (tried > 0);
-		
-		if(isContinue) {
-			if(isLogined) {
-				System.out.println("로그인 성공");
-			}else {
-				System.out.println("본인인증을 해주세요.");
-			}
-		}
-		
+		if(tried <= 1) System.out.println("본인인증을 해주세요.");
+		if(isLogined) System.out.println("로그인 성공");
 	}
 
 }
