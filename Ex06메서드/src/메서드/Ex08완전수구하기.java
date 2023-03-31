@@ -27,9 +27,16 @@ public class Ex08완전수구하기 {
 		boolean result2 = isPerfectNumber(num3);
 		System.out.println(result2);
 		
+		System.out.println("--------구분선--------");
+		int startValue = 2;
+		int endValue = 1000;
+		getPerfectNumber(startValue, endValue);
+		
+		
 	}
 	//1.isDivisor(a,b) : b가 a의 약수인지 아닌지 확인 약수면true, 아니면 false
 	public static boolean isDivisor(int num1, int num2) {
+		//num2 가 num1 의 약수인지 ? 
 		//약수라면 true 약수가 아니면 false
 		//return num1 % num2 == 0 ? true : false;
 		if(num1 % num2 == 0 ) {
@@ -73,13 +80,32 @@ public class Ex08완전수구하기 {
 	//28 : 1 2 4 7 14 => 28 (완전수)
 	
 	public static boolean isPerfectNumber(int num) {
-		if(num  == getSumOfDivisors(num) / 2) {
+		if(num  == getSumOfDivisors(num) - num) {
 			return true;
 		}else {
 			return false;
 		}
 
 	}
+	
+	
+	//5.getPerfectNumber : startValue~endValue까지의 숫자중
+	// 완전수를 출력
+	public static void getPerfectNumber(int s,int e) {
+		System.out.print(s + "~" + e + "까지의 완전수 : ");
+		for(int i = s; i<=e; i++) {
+			if(isPerfectNumber(i)) {
+				System.out.print(i + "  ");
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

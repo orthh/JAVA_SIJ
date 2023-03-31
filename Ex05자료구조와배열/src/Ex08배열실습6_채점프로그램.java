@@ -31,7 +31,6 @@ public class Ex08배열실습6_채점프로그램 {
 		
 
 		System.out.println("정답 확인 " + check);
-		
 		System.out.print("총점 : " + sum);
 
 	}
