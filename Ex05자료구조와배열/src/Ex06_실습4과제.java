@@ -8,23 +8,53 @@ public class Ex06_실습4과제 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int[] arr = new int[5];
+		//refactoring : 몇번 입력하든 다 적용.
+		
+		
+		String tempStr = "";
+
+		//int[] arr = new int[5];
 		
 		int cnt = 0;
+		System.out.println("종료하려면 -1을 입력하세요.");
 		while(true) {
 			System.out.print(cnt + 1 +"번째 입력 >> ");
-			arr[cnt] = sc.nextInt();
+			//arr[cnt] = sc.nextInt();
+			int input = sc.nextInt();
+			if(input == -1) break;
+			if(cnt == 0) {
+				tempStr +=  input;
+			}else {
+				tempStr += "," + input;
+			}
 			cnt++;
-			if(cnt>4) break;
 		}
 		
+		String[] inputArr = tempStr.split(",");
+		//String 아이템 >> int 배열
+		int[] arr = new int[inputArr.length];
+		
+		for (int i = 0; i < inputArr.length; i++) {
+			arr[i] = Integer.parseInt(inputArr[i]);
+		}
+		
+
 		int max = arr[0];
 		int min = arr[0];
-		
+		int sum = 0;
 		for(int item : arr) {
-			max = max < item ? item : max;
-			min = min < item ? min : item;
+			//삼항연산자 사용? x? 
+//			max = max < item ? item : max;
+//			min = min < item ? min : item;
+			sum += item;
+			if(max < item) {
+				max = item;
+			}
+			if(min > item) {
+				min = item;
+			}
 		}
+
 		
 		System.out.println("입력된 점수 : " 
 				+ Arrays.toString(arr)
@@ -33,6 +63,8 @@ public class Ex06_실습4과제 {
 				.replace(",", ""));
 		System.out.println("최고 점수 : " + max);
 		System.out.println("최저 점수 : " + min);
+		System.out.println("총합 : " + sum);
+		System.out.printf("평균 : %.1f" , (double)sum / arr.length);
 	}
 
 }
