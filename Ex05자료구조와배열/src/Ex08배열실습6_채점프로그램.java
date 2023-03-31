@@ -13,24 +13,25 @@ public class Ex08배열실습6_채점프로그램 {
 		
 		int[] uAnswer = new int[answer.length];
 		
+		int sum = 0;
+		String check = "";
 		int cnt = 0;
 		while(true) {
 			System.out.print(cnt + 1 + "번답 >> ");
 			uAnswer[cnt] = sc.nextInt();
+			if(answer[cnt] == uAnswer[cnt]) {
+				check += "O   ";
+				sum += 20;
+			}else {
+				check += "X   ";
+			}
 			cnt++;
 			if(cnt >= answer.length) break;
 		}
 		
-		int sum = 0;
-		System.out.println("정답 확인");
-		for(int i=0; i<answer.length; i++) {
-			if(answer[i] == uAnswer[i]) {
-				System.out.print("O   ");
-				sum += 20;
-			}else {
-				System.out.print("X   ");
-			}
-		}
+
+		System.out.println("정답 확인 " + check);
+		
 		System.out.print("총점 : " + sum);
 
 	}
