@@ -32,8 +32,8 @@ public class Q2_NXN {
 //		}
 		
 		for(int i=0; i<num; i++) {
-			for(int j=1; j<=num; j++) {
-				numArr[j][i] = j + num * i;
+			for(int j=0; j<num; j++) {
+				numArr[j][i] = j + 1 + num * i;
 			}
 		}
 		
@@ -51,27 +51,27 @@ public class Q2_NXN {
 		
 		//빌드업해서 다시 배열값 할당
 		//열
-		for(int j=0; j<=5; j++) {
-			numArr[j][0] = j;
-		}
-		for(int j=0; j<=5; j++) {
-			numArr[j][1] = j + 5;
-		}
-		for(int j=0; j<=5; j++) {
-			numArr[j][2] = j + 10;
-		}
-		for(int j=0; j<=5; j++) {
-			numArr[j][3] = j + 15;
-		}
-		for(int j=0; j<=5; j++) {
-			numArr[j][4] = j + 20;
-		}
-		
-		for(int i=0; i<num; i++) {
-			for(int j=1; j<=num; j++) {
-				numArr[j][i] = j + num * i;
-			}
-		}
+//		for(int j=0; j<=5; j++) {
+//			numArr[j][0] = j;
+//		}
+//		for(int j=0; j<=5; j++) {
+//			numArr[j][1] = j + 5;
+//		}
+//		for(int j=0; j<=5; j++) {
+//			numArr[j][2] = j + 10;
+//		}
+//		for(int j=0; j<=5; j++) {
+//			numArr[j][3] = j + 15;
+//		}
+//		for(int j=0; j<=5; j++) {
+//			numArr[j][4] = j + 20;
+//		}
+//		
+//		for(int i=0; i<num; i++) {
+//			for(int j=1; j<num; j++) {
+//				numArr[j][i] = j + num * i;
+//			}
+//		}
 		
 	}
 
