@@ -13,34 +13,31 @@ public class Ex09로그인다른방법 {
 		String[] DB_pwd = new String[maxCount];
 		
 		int dbCount = 0;
-		
-		
+		//변수공간할당 횟수 최소화
+		//주석쓰는 연습
+		String userId;
+		String userPwd;
+		int mode;
 		while(true) {
-			int mode = 0;
-			String userId;
-			String userPwd;
 			do {
 				System.out.println("1.회원가입 2.로그인 3.종료");
 				mode = sc.nextInt();
 			} while (mode<=0 || mode >=4);
 			
 			if(mode ==1 ) {
-				System.out.println("===회원가입===");
-				System.out.print("id 입력 : ");
-				userId = sc.next();
-				System.out.print("pwd 입력 : ");
-				userPwd = sc.next();
-				
 				if(dbCount >= DB_id.length) {
 					System.out.println("회원가입 가능수 초과");
 					continue;
-				}else {
-					DB_id[dbCount] = userId;
-					DB_pwd[dbCount] = userPwd;
-					System.out.println("회원가입 성공");
-					dbCount ++ ;
-					continue;
 				}
+				System.out.println("===회원가입===");
+				System.out.print("id 입력 : ");
+				DB_id[dbCount] = sc.next();
+				System.out.print("pwd 입력 : ");
+				DB_pwd[dbCount] = sc.next();
+				
+				System.out.println("회원가입 성공");
+				
+				dbCount ++ ;
 			}else if(mode == 2) {
 				System.out.println("===로그인===");
 				System.out.print("id 입력 : ");

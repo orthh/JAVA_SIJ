@@ -77,7 +77,7 @@ public class Ex09배열실습_로그인 {
 							&& userPwd.equals(DB_pwd[i])) {
 						System.out.println("로그인 성공!");
 						isLogined = true;
-						continue;
+						break;
 					}
 				}
 				if(isLogined ==false) {
