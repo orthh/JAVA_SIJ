@@ -36,7 +36,7 @@ public class Q25_dash {
 	}
 	
 
-	
+
 	//2.
 	public static int dashCount(String num) {
 		int answer = 0;

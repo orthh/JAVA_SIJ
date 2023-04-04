@@ -6,10 +6,10 @@ public class Q9_AtoZ {
 		
 		char s = 'A';
 		char e = 'Z';
-
-		for(int i = s; i<=e; i++) {
-			System.out.println((char)i);
-		}
+		
+		do {
+			System.out.println(s++);
+		} while (s <= e);
 
 	}
 
