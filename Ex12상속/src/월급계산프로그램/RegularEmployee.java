@@ -1,10 +1,7 @@
 package 월급계산프로그램;
 
-public class RegularEmployee {
+public class RegularEmployee extends Employee{
 	
-	String empno;
-	String name;
-	int pay;
 	int bonus;
 	
 	public RegularEmployee(String empno, String name, int pay, int bonus) {
@@ -14,11 +11,10 @@ public class RegularEmployee {
 		this.bonus = bonus;
 	}
 	
+	@Override
 	public int getMoneyPay() {
 		return (pay + bonus) / 12 ;
 	}
 	
-	public String print() {
-		return empno + " : " + name + " : " + pay; 
-	}
+
 }

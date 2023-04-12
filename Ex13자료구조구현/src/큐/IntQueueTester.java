@@ -7,7 +7,7 @@ public class IntQueueTester {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		IntQueue s = new IntQueue(64);
+		IntQueue s = new IntQueue(5);
 		
 		while(true) {
 			System.out.println();
