@@ -13,7 +13,7 @@ public class Ex04연결리스트 {
 		list.forEach(item -> {
 			System.out.println(item);
 		});
-		
+		System.out.println("----구분선----");
 		for(int item : list) {
 			System.out.println(item);
 		}

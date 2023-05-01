@@ -43,7 +43,7 @@ public class Ex02선택정렬_오름차순 {
 		for (int i = 0; i < arr.length - 1; i++) { // 배열안 에 숫자 개수 -1 회차
 			// 2회차
 			index = i; // 1회차 - 0 , 2회차 - 1, 3회차 - 2, 4뢰차 - 3
-			for (int j = index + 1; j < arr.length;j++) {
+			for (int j = index + 1; j < arr.length; j++) {
 				if (arr[index] > arr[j]) {
 					index = j; // 두번째로 작은숫자가 존재하는 인덱스 번호
 				}
